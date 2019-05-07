@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,
+       maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <title>jquery中的DOM操作</title>
+  <style type="text/css">
+    .insert{
+      background: skyblue;
+    }
+    .insert2{
+      color: pink;
+    }
+   
+  </style>
+</head>
+<body>
+<div id="box"></div>
+<script src="../../../js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  /*
+  * jquery中不支持在插入节点的时候，传入配置对象
+  * */
+  $(function () {
+    //正常写法
+    //$('#box').append('<p class="insert insert2">0218就业顺利</p>')
+    
+    //能否这样写：增加一个配置对象
+    /*$('#box').append('<p>0218就业顺利</p>',{
+      class:'insert insert2'
+    })*/
+    
+    //换一种方式
+    /*var $p = $('<p>0218就业顺利</p>',{
+      class:'insert insert2'
+    })
+    $('#box').append($p)*/
+    
+  })
+
+</script>
+</body>
+</html>

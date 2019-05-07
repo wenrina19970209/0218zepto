@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery的each</title>
+	</head>
+<body>
+  <script src="../../../js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    /*
+    * jquery的each方法，不能遍历字符串，意味着不能遍历json字符串
+    * */
+    $(function () {
+      var arr = [1,2,3];
+      var obj = {name:'peiqi',age:12};
+      var str = 'hello 0218';
+      
+      $.each(str,function (index,item) {
+        console.log(index,item)
+      })
+      
+      /*arr.forEach(function (item,index) {
+        console.log(index,item)
+      })*/
+      
+      var a = '{"name":"kobe","age":40}'
+    })
+  
+  </script>
+</body>
+</html>

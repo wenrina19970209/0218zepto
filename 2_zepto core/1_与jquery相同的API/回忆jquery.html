@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>回忆jquery</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,
+       maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <style type="text/css">
+    
+    .box1{
+      width: 200px;
+      height: 200px;
+      background:skyblue;
+    }
+    .box2{
+      width: 200px;
+      height: 200px;
+      background:gray;
+    }
+    .box3{
+      width: 200px;
+      height: 200px;
+      background: orange;
+    }
+    .dis{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<script type='text/javascript' src='../../js/zepto.js'></script>
+<script type='text/javascript' src='../../js/touch.js'></script>
+
+<div class="box1">我是box1</div><br><br>
+<div class="box2">我是box2</div><br><br>
+<div class="box3">
+  <p>111</p>
+  <p>222</p>
+  <p>333</p>
+</div>
+<div class="dis">我是隐藏的部分</div>
+<script>
+  /*
+  * 回忆jquery，有哪些特点？
+  *     一、对于jquery来说：
+  *       1.作为函数使用$()，更关心的是参数
+  *           1.function(){} --------->$(function(){})
+  *           2.选择器字符串 ---------->$('#btn')
+  *           3.DOM code -------------->$('div')
+  *           4.HTML字符串 ------------>$('<p>123131</p>')
+  *
+  *       2.作为对象去使用，更关心的是属性
+  *           $.ajax()  $.get()  $.post() --------->发送异步请求用的（后期讲）
+  *           $.isArray -------->判断是不是数组
+  *           $.each()---------->遍历
+  *           $.trim()---------->去除多余空格（两边）
+  *           ...
+  *      二、jquery对象
+  *           概念：核心函数$()调用，返回的结果就是一个jquery对象
+  *                  var $p = $('#wrap .content p')
+  *                  使用：
+    *                     $p.append()
+    *                     $p.find()
+    *                     $p.show()
+  *                  问题：
+  *                       jquery对象如何转化为普通DOM对象？
+  *                       实质就是把普通DOM对象从jquery对象取出来
+  *                        $P[0] $p.get(0)
+  *
+  *        总结：以上所有方法和规定，全部适用于zepto
+  *
+  * */
+</script>
+
+</body>
+</html>
+

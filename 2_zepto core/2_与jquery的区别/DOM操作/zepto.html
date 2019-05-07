@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>zepto</title>
+  <style type="text/css">
+
+    #insert{
+      color: skyblue;
+    }
+    .insert1{
+      background-color: orange;
+    }
+    .insert2{
+      height: 30px;
+      border: 3px solid black;
+    }
+  </style>
+</head>
+<body>
+<div id="box"></div>
+<script src="../../../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(function () {
+    //正常写法
+    //$('#box').append('<p class="insert insert2">0218就业顺利</p>')
+
+    //可以插入一个配置对象
+    var $p = $('<p>0218就业顺利</p>',{
+      class:'insert insert1 insert2'
+    })
+    $('#box').append($p)
+
+  })
+
+
+</script>
+</body>
+</html>

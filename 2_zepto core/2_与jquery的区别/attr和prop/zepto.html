@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>zepto_selected</title>
+</head>
+<body>
+<select style="font-size: 25px;">
+  <option value="peiqi">小猪佩奇</option>
+  <option value="qiaozhi">兄弟乔治</option>
+  <option value="danni" selected="true">小狗丹尼</option>
+  <option value="suxi">小羊苏西</option>
+  <option value="kandi" selected="true">小猫坎迪</option>
+</select>
+<button id="btn" style="font-size: 25px;">按钮</button>
+
+<script src="../../../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/touch.js"></script>
+<script type="text/javascript">
+  /*
+  * attr与prop的区别？
+  * 1.在zepto中，如果你用attr去获取布尔值属性，且该布尔值属性没有在标签体内定义，获取到的是false
+  * 2.在zepto中，如果你用prop去获取布尔值属性，且该布尔值属性没有在标签体内定义(同jquery)
+  * 3.在zepto中prop的优先级高于attr，所以推荐使用prop
+  * 4.坑！---zepto中removeProp只有在zepto1.2中才有，1.0还没有
+  * 5.结论：获取的时候最好用prop，移除的时候最好用removeAttr
+  *
+  * */
+  $(function () {
+    $('option').each(function (index,item) {
+      //console.log($(this).attr('selected'));
+      //console.log($(this).prop('selected'));
+      
+      $('#btn').click(function () {
+        $(this).prop('disabled',true)
+        setTimeout(function () {
+          $('#btn').removeAttr('disabled')
+        },2000)
+      })
+    })
+  })
+
+</script>
+</body>
+</html>
